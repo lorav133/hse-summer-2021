@@ -2,15 +2,24 @@ package com.example.demo.user;
 
 import lombok.Data;
 
-public @Data
-class User {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "\"User\"")
+public @Data class User {
+  @Id
   private String userID;
   private String userName;
   private String email;
   private int age;
   private String description;
 
+  public User() {}
+
   public User(String userID, String userName, String email, int age, String description) {
+    super();
     this.userID = userID;
     this.userName = userName;
     this.email = email;

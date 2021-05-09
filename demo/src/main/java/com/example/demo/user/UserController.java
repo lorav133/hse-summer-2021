@@ -32,6 +32,7 @@ public class UserController {
   public void addUser(@RequestBody User user) {
     userService.addUser(user);
 
+
   }
 
   @PutMapping(value="/users/{id}", consumes="application/json", produces="application/json")
